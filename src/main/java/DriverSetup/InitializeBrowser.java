@@ -14,4 +14,9 @@ public class InitializeBrowser
 		
 		return driver;
 	}
+	
+	public void waiting() throws InterruptedException
+	{
+		Thread.sleep(2000);
+	}
 }

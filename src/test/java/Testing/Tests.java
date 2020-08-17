@@ -32,7 +32,7 @@ public class Tests extends InitializeBrowser
 	{
 		driver.get("https://www.tripadvisor.in/");	
 		driver.manage().window().maximize();
-		Thread.sleep(1000);
+		waiting();
 	}
 	
 	@Test (priority = 1)
@@ -41,40 +41,40 @@ public class Tests extends InitializeBrowser
 		FirstPage lp=new FirstPage(driver);
 		
 		lp.findingHolidayHomes().click();
-		Thread.sleep(3000);
+		waiting();
 		
 		WebElement place = lp.getDestination();
 		place.sendKeys("Nairobi");
-		Thread.sleep(3000);
+		waiting();
 		place.sendKeys(Keys.ENTER);
-		Thread.sleep(1000);
+		waiting();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		lp.managePopUp1();
-		Thread.sleep(2000);
+		waiting();
 		
 		lp.managePopUp2();
-		Thread.sleep(1000);
+		waiting();
 		
 		lp.clickCalender().click();;
-		Thread.sleep(2000);
+		waiting();
 		
 		lp.checkIn().click();
-		Thread.sleep(2000);
-
+		waiting();
+		
 		lp.checkOut().click();
-		Thread.sleep(2000);
+		waiting();
 
 		lp.selectingGuests().click();
-		Thread.sleep(2000);
+		waiting();
 
 		lp.addGuests().click();
-		Thread.sleep(1000);
+		waiting();
 
 		lp.addGuests().click();
-		Thread.sleep(1000);
+		waiting();
 
 		lp.applySearch().click();
-		Thread.sleep(2000);
+		waiting();
 
 	}
 	
@@ -84,13 +84,13 @@ public class Tests extends InitializeBrowser
 		FilterPage fp=new FilterPage(driver);
 		
 		fp.selectRatings().click();
-		Thread.sleep(2000);
+		waiting();
 		
 		fp.selectingAmneties().click();
-		Thread.sleep(2000);
+		waiting();
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("window.scrollBy(0,-1000)");
-		Thread.sleep(2000);
+		waiting();
 	}
 	
 	
