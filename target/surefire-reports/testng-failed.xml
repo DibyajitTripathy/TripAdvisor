@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="Test(failed)" verbose="0">
+  <test thread-count="5" name="Test For Firefox(failed)" verbose="0">
+    <parameter name="browser" value="firefox"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Testing.Tests">
+      <class name="com.Test.TripAdvisor">
         <methods>
           <include name="filterPage"/>
-          <include name="closebrowser"/>
-          <include name="initialSetup"/>
-          <include name="landingPage"/>
+          <include name="closeAll"/>
+          <include name="resultPage"/>
+          <include name="firstPage"/>
+          <include name="Set"/>
         </methods>
-      </class> <!-- Testing.Tests -->
+      </class> <!-- com.Test.TripAdvisor -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test For Firefox(failed) -->
 </suite> <!-- Failed suite [Suite] -->

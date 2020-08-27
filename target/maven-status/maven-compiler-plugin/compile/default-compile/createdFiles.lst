@@ -1,3 +1,8 @@
-pages\FirstPage.class
-pages\FilterPage.class
-pages\ResultsPage.class
+com\data\PropertiesRead.class
+com\data\ExcelRead.class
+com\base\DriverSetup.class
+com\base\ScreenShots.class
+com\pages\ResultPage.class
+com\pages\FirstPage.class
+com\pages\FilterPage.class
+com\waiting\threadWait.class
